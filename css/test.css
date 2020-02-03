@@ -1,0 +1,11 @@
+body {
+  background: pink;
+}
+
+body #wrapper {
+  font-size: 1rem;
+}
+
+body #wrapper h1 {
+  color: #fff;
+}

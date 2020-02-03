@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="keywords" content="ecc,ECC,ecc comp.,...">
+  <meta name="description" content="ここに説明文を設定">  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@twitteraccount">
+  <meta property="og:site_name" content="サイト名">
+  <meta property="og:title" content="サイトタイトル">
+  <meta property="og:description" content="サイト説明文">
+  <meta property="og:url" content="https://www.hogehoge.com">
+  <meta property="og:image" content="https://www.hogehoge.com./hoge.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="400">
+  <meta property="og:type" content="website">
+  <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+  <!-- <link rel="canonical" hreflang="http://">
+  <link rel="alternate" type="" title="" href="http://"> スマホとPCで分ける時-->
+  <link rel="shortcut icon" href="http://www.hoge.hoge/favicon.ico" type="image/vnd.microsoft.icon">
+  <link rel="apple-touch-icon" href="http://www.hoge.hoge/logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:500&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="css/img.making.css">
+  <title>Document</title>
+  <script src="js/processing.min.js"></script>
+</head>
+<body>
+ 
+  <canvas width= "device-width" class="canvas" id="canvas" data-processing-sources="ume_irasuto.pde"></canvas>
+
+  <div class="wrapper">
+    <p class="text"> </p>
+  </div>
+  <p>下に文章を入力し、画面をタップしてください。</p>
+  <textarea id="textarea" class="textarea" placeholder="ここにメッセージを入力してください" rows="3" cols="40"></textarea>
+  <div class="flex">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+  </div>
+  <div class="flex">
+    <div class="rotate rotate1">反時計回り</div class="rotate">
+    <div class="rotate rotate2">時計回り</div>
+  </div>
+  <div class="ok">送信</div>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/img_making.js"></script>
+</body>
+</html>
+
+<!-- <script type="application/processing">
+  /* @pjs preload="img.jpg"; */
+  PImage img; //画像データ
+
+  void setup() {
+    size(600, 800);
+    img = loadImage("img.jpg");
+    background(255); //背景
+    noStroke(); //枠線は無し
+    rectMode(CENTER); //中心を原点に四角形を描画
+    frameRate(2000);
+    noLoop();
+  }
+  void draw() {
+    for (int i=0; i<300001; i++) {
+      //場所をランダムに決定
+      int x = int(random(width));
+      int y = int(random(height));
+      //色を取得
+      color col = img.get(x, y);
+      fill(col, 127);
+      pushMatrix();
+      translate(x, y);
+      //色の色相を回転角度に
+      rotate(map(hue(col), 0, 255, 0, PI));
+      //色の再度を四角形の幅に
+      float w = map(saturation(col), 0, 255, 1, 40);
+      rect(0, 0, w, 1.5);
+      popMatrix();
+      if(i==300000){
+      save("sample" + "a" + ".jpg");
+      };
+    }
+  }
+  </script> -->
